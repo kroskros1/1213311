@@ -17,6 +17,11 @@ translations = {
     "admin_panel": {"ua": "👤 Адмін панель:", "en": "👤 Admin panel:"},
     "enter_user_id": {"ua": "Введіть Telegram ID нового користувача:", "en": "Enter the new user's Telegram ID:"},
     "user_added": {"ua": "✅ Користувач {} доданий!", "en": "✅ User {} added!"}
+"feedback": {
+    "ua": "📬 Зворотній зв'язок",
+    "en": "📬 Feedback"
+}
+
 }
 
 def t(key, lang="ua"):
