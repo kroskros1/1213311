@@ -15,8 +15,10 @@ def get_main_menu(lang="ua"):
         [InlineKeyboardButton(i18n.t("thresholds", lang), callback_data="thresholds")],
         [InlineKeyboardButton(i18n.t("logs", lang), callback_data="logs")],
         [InlineKeyboardButton(i18n.t("settings", lang), callback_data="settings")],
-        [InlineKeyboardButton(i18n.t("admin", lang), callback_data="admin")]
+        [InlineKeyboardButton(i18n.t("admin", lang), callback_data="admin")],
+        [InlineKeyboardButton(i18n.t("feedback", lang), callback_data="feedback")]
     ])
+
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     user_id = update.effective_user.id
