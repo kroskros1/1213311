@@ -33,6 +33,15 @@ async def handle_buttons(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await query.answer()
     user_id = query.from_user.id
     lang = users.get_lang(user_id)
+elif action == "feedback":
+    await query.edit_message_text(
+        "📬 Ви можете написати нам ваші пропозиції чи проблеми сюди:\n\n"
+        "📧 Email: support@example.com\n"
+        "📞 Телефон: +380 99 123 4567\n"
+        "📨 Або просто надішліть повідомлення у чат.",
+        reply_markup=logics.get_back(lang)
+    )
+
 
     if not users.is_authorized(user_id):
         await query.edit_message_text("⛔ Доступ заборонено.")
